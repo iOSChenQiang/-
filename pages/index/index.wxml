@@ -1,0 +1,39 @@
+<view class="bigcontainer">
+
+  <view class="carinfo-view">
+    <view class="index-bd">
+      <view class="kind-list">
+        <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+          <view class="kind-list-item">
+            <view id="{{item.title}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}"  bindtap="kindToggle">
+              <view class="kind-list-text">{{item.title}}</view>
+              <view class="kind-list-text name">{{item.name}}</view>
+              
+              <view class="kind-list-text other" >{{item.other}}</view>
+              
+              <image class="widgets__info-img"  wx:if="{{item.work == '0'}}" src="" style="width: 30rpx; height: 30rpx;" />
+              <image class="widgets__info-img"  wx:else src="../pic/arrowright.png" style="width: 30rpx; height: 30rpx;" />
+
+            </view>
+            <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+              <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+                <block wx:for-items="{{item.detail}}" wx:for-item="type" wx:key="*item">
+                  <view class="navigator">
+                    <view class="navigator-text" wx:if="{{item.title == '标题2'}}"></view>
+                    <view class="navigator-text" wx:else>22</view>
+                    <view class="navigator-text navigator-text-type">{{type.detailType}}</view>
+                  <view class="navigator-text navigator-text-type">{{type.detailType}}</view>
+                    
+                    <image class="widgets__info-img" src="" style="width: 30rpx; height: 30rpx;" />
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+
+    </view>
+  </view>
+
+</view>

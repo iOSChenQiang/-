@@ -1,0 +1,22 @@
+@import "../../utils/index.wxss";
+page {
+  background-color: rgb(234, 234, 234);
+}
+
+.bigcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kind-list-item-hd-show .widgets__info-img{
+  transform: rotate(-90deg);
+}
+.widgets__info-img{
+   transform: rotate(90deg);
+}
+.carinfo-view {
+  width: 100%;
+}
+
+
+
